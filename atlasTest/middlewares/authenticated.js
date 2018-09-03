@@ -3,7 +3,8 @@ var jwt = require('jwt-simple');
 var moment = require('moment');
 var secret = 'clave_secreta_';
 exports.ensureAuth = function (req, res, next) {
-    if (!req.headers.authorization) {
+
+    /*if (!req.headers.authorization) {
         return res.status(403).send({ message: 'La peticion no tiene la cabecera de autenticación' });
     } else {
         var token = req.headers.authorization.replace(/['"]+/g, '');
@@ -19,7 +20,7 @@ exports.ensureAuth = function (req, res, next) {
                 message: 'EL token no es valido'
             });
         }
-        req.user = payload;
+        req.user = payload;*/
         next();
-    }
+    //}
 }

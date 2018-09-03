@@ -17,9 +17,15 @@ const data = [
   const kmeans = require('node-kmeans');
   kmeans.clusterize(vectors, {k: 2}, (err,res) => {
 
-    if (err) console.log(err);
+    /*if (err) console.log(err);
 
-    else console.log('%o',res);
+    else console.log('%o',res);*/
 
 });
 
+
+const vectorize = require('./consts');
+
+var vector = new Array();
+vector = vectorize.vectorize("hola manola manola hola manola");
+console.log( vector );

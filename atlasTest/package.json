@@ -18,7 +18,8 @@
     "moment": "^2.20.1",
     "mongoose": "^5.0.1",
     "mongoose-pagination": "^1.0.0",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "node-kmeans": "^1.1.8"
   },
   "devDependencies": {
     "nodemon": "^1.14.12"

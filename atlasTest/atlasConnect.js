@@ -12,7 +12,7 @@ var articulo_routes = require('./routes/articulo');
 //var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
 //var config = require('./config'); // get our config file
 
-var uri = "mongodb+srv://blytes:grupoassa12@cluster0-ag0cm.mongodb.net/admin";
+var uri = "mongodb+srv://blytes:grupoassa12@cluster0-ag0cm.mongodb.net/Documentos";
 
 // =======================
 // configuration =========
