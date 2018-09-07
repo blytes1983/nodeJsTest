@@ -28,7 +28,7 @@ var apiRoutes = express.Router();
 
 // route to show a random message (GET http://localhost:8080/api/)
 apiRoutes.get('/', function (req, res) {
-    res.json({ message: 'Welcome to the coolest API on earth!' });
+    res.json({ message: 'ombligo!' });
 });
 
 // route to return all users (GET http://localhost:8080/api/users)
@@ -54,7 +54,7 @@ apiRoutes.post('/initsetup', function (req, res) {
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 // Cargamos las rutas
-app.use('/api', articulo_routes);
+//app.use('/api', articulo_routes);
 
 // ==============================================
 /*MongoClient.connect(uri, function (err, client) {
@@ -72,7 +72,7 @@ app.use('/api', articulo_routes);
 });*/
 
 // apply the routes to our application with the prefix /api
-//app.use('/api', apiRoutes);
+app.use('/api', apiRoutes);
 
 // =======================
 // start the server ======

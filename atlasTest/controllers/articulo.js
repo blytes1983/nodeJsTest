@@ -1,7 +1,7 @@
 'use strict'
 // Cargamos los modelos para usarlos posteriormente
 var Articulo = require('../models/articulo');
-var docVector = require('../consts');
+//var docVector = require('../consts');
 
 // Conseguir datos de un usuario
 module.exports = {
@@ -19,5 +19,11 @@ module.exports = {
         articulo.save();
         
         res.status(200).send({ 'message': 'Articulo creado exitosamente' });
+    },
+
+    getById: (req, res) => {
+
+        res.status(200).send({ 'message': 'Ombligo' });
+
     }
 }

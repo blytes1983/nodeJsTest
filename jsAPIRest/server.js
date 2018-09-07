@@ -37,6 +37,8 @@ app.get('/', function (req, res) {
 // we'll get to these in a second
 app.get('/setup', function (req, res) {
 
+    console.log("se creó la DB");
+    
     // create a sample user
     var nick = new User({
         name: 'Nick Cerminara',
@@ -107,9 +109,16 @@ apiRoutes.get('/', function (req, res) {
 
 // route to return all users (GET http://localhost:8080/api/users)
 apiRoutes.get('/users', function (req, res) {
-    User.find({}, function (err, users) {
+
+    User.find( { 'name' : req.headers['name'] }, function (err, users) {
         res.json(users);
     });
+});
+
+// API de prueba para devolver un archivo
+apiRoutes.get('/file', function (req, res) {
+
+    res.json( { file : "ASDASDDS" } );
 });
 
 // route to authenticate a user (POST http://localhost:8080/api/authenticate)

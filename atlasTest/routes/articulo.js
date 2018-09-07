@@ -9,5 +9,6 @@ var md_auth = require('../middlewares/authenticated');
 
 // Creamos una ruta para los métodos que tenemos en nuestros controladores
 api.post('/articulo', md_auth.ensureAuth, ArticuloController.create );
+api.get('/articulo/:IdArticulo', md_auth.ensureAuth, ArticuloController.getById );
 // Exportamos la configuración
 module.exports = api;
